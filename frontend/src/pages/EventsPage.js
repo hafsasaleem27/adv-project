@@ -1,5 +1,4 @@
 import { useLoaderData } from 'react-router-dom';
-
 import EventsList from '../components/EventsList';
 
 function EventsPage() {
@@ -7,7 +6,7 @@ function EventsPage() {
 
   return (
     <>
-      <EventsList events={events} />
+      <EventsList events={events}/>
     </>
   );
 }
