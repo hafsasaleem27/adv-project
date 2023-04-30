@@ -1,3 +1,4 @@
+import MainNavigation from "../components/MainNavigation";
 import { useRouteError } from "react-router-dom";
 import PageContent from "../components/PageContent";
 
@@ -13,14 +14,17 @@ function ErrorPage() {
   }
 
   if (error.status === 404) {
-    title = 'Not found!';
-    message = 'Could not find resource!';
+    title = "Not found!";
+    message = "Could not find resource!";
   }
 
   return (
-    <PageContent title={title}>
-      <p>{message}</p>
-    </PageContent>
+    <>
+      <MainNavigation/>
+      <PageContent title={title}>
+        <p>{message}</p>
+      </PageContent>
+    </>
   );
 }
 
